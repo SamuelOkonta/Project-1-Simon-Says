@@ -28,7 +28,7 @@ $('#eventClick').on('click' , function() {
         console.log(playerChoice)
         if(playerChoice[i] == gameChoice[i]) {
             console.log('you did it')
-            continueGame();
+            
         } else {
             console.log('incorrect')
         }
@@ -40,7 +40,7 @@ $('#eventClick').on('click' , function() {
         console.log(playerChoice)
         if(playerChoice[i] == gameChoice[i]) {
             console.log('you did it')
-            continueGame();
+            
         } else {
             console.log('incorrect')
         }
@@ -52,7 +52,7 @@ $('#eventClick').on('click' , function() {
         console.log(playerChoice)
         if(playerChoice[i] == gameChoice[i]) {
             console.log('you did it')
-            continueGame();
+            
         } else {
             console.log('incorrect')
         }
@@ -64,7 +64,7 @@ $('#eventClick').on('click' , function() {
         console.log(playerChoice)
         if(playerChoice[i] == gameChoice[i]) {
             console.log('you did it')
-            continueGame();
+            
         } else {
             console.log('incorrect')
         }
@@ -72,13 +72,14 @@ $('#eventClick').on('click' , function() {
 
 
     function randomNum(){
-        let num = Math.floor((Math.random() * 4) + 1)
-        console.log(num)
-        gameChoice.push(num)
-        function continueGame() {
-            let randomNum;
-            for(let i = 0; i < 20; i++)
-            gameChoice.push(randomNum);
+        let num 
+        
+            for(let i = 0; i < 20; i++) {
+              num = Math.floor((Math.random() * 4) + 1)
+              gameChoice.push(num);
+              console.log(num)
+            }
+            
         }
        
         console.log(gameChoice)
@@ -99,7 +100,7 @@ $('#eventClick').on('click' , function() {
             $(".green").fadeIn()
         }}
         
-    }
+    
 
     // newRandomNum = () => {
     //     let num = Math.floor((Math.random() * 4) + 1)
