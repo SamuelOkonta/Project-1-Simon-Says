@@ -10,7 +10,7 @@ $(document).ready(function(){
     
     //     displayResult(container);
     
-$('#eventClick').on('click' , function() {
+$('#Start').on('click' , function() {
     randomNum()
 })
 
@@ -18,7 +18,8 @@ $('#eventClick').on('click' , function() {
     let gameChoice = []
     let playerChoice = []
     let num;
-    let i = 0
+    
+   
     
 
 
@@ -27,9 +28,9 @@ $('#eventClick').on('click' , function() {
         $(".red").fadeIn()
         playerChoice.push(1)
         console.log(playerChoice)
-        if(playerChoice[i] == gameChoice[i]) {
+        if(playerChoice[0] == gameChoice[0]) {
             console.log('you did it')
-            
+            randomColor()
         } else {
             console.log('incorrect')
         }
@@ -39,9 +40,9 @@ $('#eventClick').on('click' , function() {
         $(".yellow").fadeIn()
         playerChoice.push(2)
         console.log(playerChoice)
-        if(playerChoice[i] == gameChoice[i]) {
+        if(playerChoice[0] == gameChoice[0]) {
             console.log('you did it')
-            
+            randomColor()
         } else {
             console.log('incorrect')
         }
@@ -51,9 +52,9 @@ $('#eventClick').on('click' , function() {
         $(".green").fadeIn()
         playerChoice.push(4)
         console.log(playerChoice)
-        if(playerChoice[i] == gameChoice[i]) {
+        if(playerChoice[0] == gameChoice[0]) {
             console.log('you did it')
-            
+            randomColor()
         } else {
             console.log('incorrect')
         }
@@ -63,9 +64,9 @@ $('#eventClick').on('click' , function() {
         $(".blue").fadeIn()
         playerChoice.push(3)
         console.log(playerChoice)
-        if(playerChoice[i] == gameChoice[i]) {
+        if(playerChoice[0] == gameChoice[0]) {
             console.log('you did it')
-            
+            randomColor()
         } else {
             console.log('incorrect')
         }
@@ -73,14 +74,12 @@ $('#eventClick').on('click' , function() {
 
 
     function randomNum(){
-        
-            for(let i = 0; i < 20; i++) {
-              num = Math.floor((Math.random() * 4) + 1)
-              gameChoice.push(num);
-              console.log(num)
+        randomColor()
+            for(let i = 0; i < gameChoice.length;  i++) {
               if(num == 1){
                 $(".red").fadeOut()
                 $(".red").fadeIn()
+
             } else if(num == 2){
                 $(".yellow").fadeOut()
                 $(".yellow").fadeIn()
@@ -93,10 +92,14 @@ $('#eventClick').on('click' , function() {
             }}
             }
             
-        
+        function randomColor () {
+            num = Math.floor((Math.random() * 4) + 1)
+            gameChoice.push(num);
+            console.log(num)
+        }
        
-        console.log(gameChoice)
-        console.log(playerChoice)
+        // console.log(gameChoice)
+        // console.log(playerChoice)
 
         
         // if(num == 1){
