@@ -1,4 +1,10 @@
-$(document).ready(function(){
+
+let playerChoice = []
+let gameChoice = []
+let num;
+let notRun
+// let gamePlay
+$(document).ready(function () {
     // document.querySelector(".red").toggle("scale");
     // document.querySelector(".yellow").toggle("scale");
     // document.querySelector(".green").toggle("scale");
@@ -7,101 +13,158 @@ $(document).ready(function(){
     //     // select random input and check it
     //     $(container+' .checked').removeClass('checked');
     //     $(container+' :radio:eq('+Math.round(Math.random()*($(container+' input:radio').length-1))+')').attr('checked','checked').addClass('checked');
-    
+
     //     displayResult(container);
-    
-$('#Start').on('click' , function() {
-    randomNum()
-})
 
 
-    let gameChoice = []
-    let playerChoice = []
-    let num;
-    
-   
-    
 
 
-    $('.red').on('click', function(){
+    function checkArray(arr1, arr2) {
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== arr2[i]) {
+                console.log('do not match')
+                return
+            }
+        }
+
+    }
+
+    // function notRun (){
+    //     if (playerChoice !== game)
+    // }
+
+
+
+
+    $('.red').on('click', function () {
         $(".red").fadeOut()
         $(".red").fadeIn()
         playerChoice.push(1)
-        console.log(playerChoice)
-        if(playerChoice[0] == gameChoice[0]) {
+        console.log(playerChoice, "my choice")
+        if (playerChoice.length === gameChoice.length) {
+            checkArray(playerChoice, gameChoice)
             console.log('you did it')
-            randomColor()
+            setTimeout(() => {
+                randomColor()
+            }, 1000)
         } else {
             console.log('incorrect')
         }
-    })
-    $('.yellow').on('click', function(){
+    }
+
+    )
+    $('.yellow').on('click', function () {
         $(".yellow").fadeOut()
         $(".yellow").fadeIn()
         playerChoice.push(2)
-        console.log(playerChoice)
-        if(playerChoice[0] == gameChoice[0]) {
+        console.log(playerChoice, "my choice")
+        if (playerChoice.length === gameChoice.length) {
+            checkArray(playerChoice, gameChoice)
             console.log('you did it')
-            randomColor()
+            setTimeout(() => {
+                randomColor()
+            }, 1000)
         } else {
             console.log('incorrect')
         }
-    })
-    $('.green').on('click', function(){
+    }
+
+    )
+    $('.green').on('click', function () {
         $(".green").fadeOut()
         $(".green").fadeIn()
         playerChoice.push(4)
-        console.log(playerChoice)
-        if(playerChoice[0] == gameChoice[0]) {
+        console.log(playerChoice, "my choice")
+        if (playerChoice.length === gameChoice.length) {
+            checkArray(playerChoice, gameChoice)
             console.log('you did it')
-            randomColor()
+            setTimeout(() => {
+                randomColor()
+            }, 1000)
         } else {
             console.log('incorrect')
         }
-    })
-    $('.blue').on('click', function(){
+    }
+
+    )
+    $('.blue').on('click', function () {
         $(".blue").fadeOut()
         $(".blue").fadeIn()
         playerChoice.push(3)
-        console.log(playerChoice)
-        if(playerChoice[0] == gameChoice[0]) {
+        console.log(playerChoice, "my choice")
+        if (playerChoice.length === gameChoice.length) {
+            checkArray(playerChoice, gameChoice)
             console.log('you did it')
-            randomColor()
+            setTimeout(() => {
+                randomColor()
+            }, 1000)
         } else {
             console.log('incorrect')
         }
-    })
+    }
 
+    )
 
-    function randomNum(){
-        randomColor()
-            for(let i = 0; i < gameChoice.length;  i++) {
-              if(num == 1){
-                $(".red").fadeOut()
-                $(".red").fadeIn()
+    // setTimeout and setInterval
 
-            } else if(num == 2){
-                $(".yellow").fadeOut()
-                $(".yellow").fadeIn()
-            } else if(num ==3){
-                $(".blue").fadeOut()
-                $(".blue").fadeIn()
-            } else if(num == 4){
-                $(".green").fadeOut()
-                $(".green").fadeIn()
-            }}
-            }
-            
-        function randomColor () {
-            num = Math.floor((Math.random() * 4) + 1)
-            gameChoice.push(num);
-            console.log(num)
+    // function randomNum() {
+    //     randomColor()
+    //     for (let i = 0; i < 1; i++) {
+    //         if (num == 1) {
+    //             $(".red").fadeOut()
+    //             $(".red").fadeIn()
+    //         } else if (num == 2) {
+    //             $(".yellow").fadeOut()
+    //             $(".yellow").fadeIn()
+    //         } else if (num == 3) {
+    //             $(".blue").fadeOut()
+    //             $(".blue").fadeIn()
+    //         } else if (num == 4) {
+    //             $(".green").fadeOut()
+    //             $(".green").fadeIn()
+    //         }
+    //     }
+    // }
+
+    function randomColor() {
+        num = Math.floor((Math.random() * 4) + 1)
+        gameChoice.push(num);
+        console.log(gameChoice)
+        console.log(num, 'rand')
+
+        for (let i = 0; i < gameChoice.length; i++) {
+            setTimeout(function () {
+                if (gameChoice[i] == 1) {
+                    $(".red").fadeOut()
+                    $(".red").fadeIn()
+                } else if (gameChoice[i] == 2) {
+                    $(".yellow").fadeOut()
+                    $(".yellow").fadeIn()
+                } else if (gameChoice[i] == 3) {
+                    $(".blue").fadeOut()
+                    $(".blue").fadeIn()
+                } else if (gameChoice[i] == 4) {
+                    $(".green").fadeOut()
+                    $(".green").fadeIn()
+                }
+
+            },1000 * i) 
+        // for( let i = 0 < gameChoice.length; i++) {
+
+        // }
         }
-       
+    }
+        $('#Start').on('click', function () {
+            randomColor()
+        })
+
+        // function notRun(){
+        //     if(playerChoice !== gameChoice)
+
         // console.log(gameChoice)
         // console.log(playerChoice)
 
-        
+
         // if(num == 1){
         //     $(".red").fadeOut()
         //     $(".red").fadeIn()
@@ -115,33 +178,33 @@ $('#Start').on('click' , function() {
         //     $(".green").fadeOut()
         //     $(".green").fadeIn()
         // }}
-        
-    
 
-    // newRandomNum = () => {
-    //     let num = Math.floor((Math.random() * 4) + 1)
-    //     console.log(num)
-    //     gameChoice.push(num)
-    //     console.log(gameChoice)
-    //     console.log(playerChoice)
 
-        
-    //     if(num == 1){
-    //         $(".red").fadeOut()
-    //         $(".red").fadeIn()
-    //     } else if(num == 2){
-    //         $(".yellow").fadeOut()
-    //         $(".yellow").fadeIn()
-    //     } else if(num ==3){
-    //         $(".blue").fadeOut()
-    //         $(".blue").fadeIn()
-    //     } else if(num == 4){
-    //         $(".green").fadeOut()
-    //         $(".green").fadeIn()
-    //     }
-        
-    // }
 
-   
+        // newRandomNum = () => {
+        //     let num = Math.floor((Math.random() * 4) + 1)
+        //     console.log(num)
+        //     gameChoice.push(num)
+        //     console.log(gameChoice)
+        //     console.log(playerChoice)
 
-        })
+
+        //     if(num == 1){
+        //         $(".red").fadeOut()
+        //         $(".red").fadeIn()
+        //     } else if(num == 2){
+        //         $(".yellow").fadeOut()
+        //         $(".yellow").fadeIn()
+        //     } else if(num ==3){
+        //         $(".blue").fadeOut()
+        //         $(".blue").fadeIn()
+        //     } else if(num == 4){
+        //         $(".green").fadeOut()
+        //         $(".green").fadeIn()
+        //     }
+
+        // }
+
+
+
+    })
