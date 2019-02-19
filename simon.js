@@ -17,6 +17,7 @@ $('#eventClick').on('click' , function() {
 
     let gameChoice = []
     let playerChoice = []
+    let num;
     let i = 0
     
 
@@ -72,33 +73,45 @@ $('#eventClick').on('click' , function() {
 
 
     function randomNum(){
-        let num 
         
             for(let i = 0; i < 20; i++) {
               num = Math.floor((Math.random() * 4) + 1)
               gameChoice.push(num);
               console.log(num)
+              if(num == 1){
+                $(".red").fadeOut()
+                $(".red").fadeIn()
+            } else if(num == 2){
+                $(".yellow").fadeOut()
+                $(".yellow").fadeIn()
+            } else if(num ==3){
+                $(".blue").fadeOut()
+                $(".blue").fadeIn()
+            } else if(num == 4){
+                $(".green").fadeOut()
+                $(".green").fadeIn()
+            }}
             }
             
-        }
+        
        
         console.log(gameChoice)
         console.log(playerChoice)
 
         
-        if(num == 1){
-            $(".red").fadeOut()
-            $(".red").fadeIn()
-        } else if(num == 2){
-            $(".yellow").fadeOut()
-            $(".yellow").fadeIn()
-        } else if(num ==3){
-            $(".blue").fadeOut()
-            $(".blue").fadeIn()
-        } else if(num == 4){
-            $(".green").fadeOut()
-            $(".green").fadeIn()
-        }}
+        // if(num == 1){
+        //     $(".red").fadeOut()
+        //     $(".red").fadeIn()
+        // } else if(num == 2){
+        //     $(".yellow").fadeOut()
+        //     $(".yellow").fadeIn()
+        // } else if(num ==3){
+        //     $(".blue").fadeOut()
+        //     $(".blue").fadeIn()
+        // } else if(num == 4){
+        //     $(".green").fadeOut()
+        //     $(".green").fadeIn()
+        // }}
         
     
 
@@ -128,4 +141,4 @@ $('#eventClick').on('click' , function() {
 
    
 
-)
+        })
