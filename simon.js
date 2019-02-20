@@ -17,11 +17,9 @@ $(document).ready(function () {
     function checkArray(arr1, arr2) {
         for (let i = 0; i < arr1.length; i++) {
             if (arr1[i] !== arr2[i]) {
-
-                console.log('do not match')
                 
             }
-            // return
+            
         }
 
     }
@@ -46,6 +44,17 @@ $(document).ready(function () {
                 console.log('made it here')
             }, 1000)
         }
+        else {
+            for( i = 0 ; i < playerChoice.length; i++) {
+               if (gameChoice(i) !== playerChoice(i)) {
+               alert('Gamer Over!')
+                gameChoice = []
+                playerChoice = []
+               }   
+            }
+        }
+        
+
     }
 
     )
@@ -68,9 +77,20 @@ $(document).ready(function () {
                 }
             }, 1000)
         }
-    }
+        else {
+            for( i = 0 ; i < playerChoice.length; i++) {
+               if (gameChoice(i) !== playerChoice(i)) {
+               alert('Gamer Over!')
+                gameChoice = []
+                playerChoice = []
+               }   
+            }
+        }
+    })
+    
 
-    )
+
+    
     $('.green').on('click', function () {
         $(".green").fadeOut()
         audio3.play()
@@ -90,9 +110,19 @@ $(document).ready(function () {
                 }
             }, 1000)
         }
-    }
+        else {
+            for( i = 0 ; i < playerChoice.length; i++) {
+               if (gameChoice(i) !== playerChoice(i)) {
+               alert('Gamer Over!')
+                gameChoice = []
+                playerChoice = []
+               }   
+            }
+            }
+        })
+    
 
-    )
+    
     $('.blue').on('click', function () {
         $(".blue").fadeOut()
         audio4.play()
@@ -110,12 +140,21 @@ $(document).ready(function () {
                     highscore = score
                     $('#highscore').text(`HIGH SCORE = ${highscore}`) 
                 }
-                console.log('made it here')
             }, 1000)
         }
-    }
-
-    )
+        else {
+            for( i = 0 ; i < playerChoice.length; i++) {
+               if (gameChoice(i) !== playerChoice(i)) {
+               alert('Gamer Over!')
+                gameChoice = []
+                playerChoice = []
+               }   
+                
+            }
+        }
+    })
+    
+    
 
 
 
