@@ -41,7 +41,7 @@ $(document).ready(function () {
         $(".red").fadeIn()
         playerChoice.push(1)
         console.log(playerChoice, "my choice")
-        if (playerChoice === gameChoice) {
+        if (playerChoice.length == gameChoice.length) {
             checkArray(playerChoice, gameChoice)
             console.log('you did it')
             setTimeout(() => {
@@ -58,7 +58,7 @@ $(document).ready(function () {
         $(".yellow").fadeIn()
         playerChoice.push(2)
         console.log(playerChoice, "my choice")
-        if (playerChoice === gameChoice) {
+        if (playerChoice.length == gameChoice.length) {
             checkArray(playerChoice, gameChoice)
             console.log('you did it')
             setTimeout(() => {
@@ -75,7 +75,7 @@ $(document).ready(function () {
         $(".green").fadeIn()
         playerChoice.push(4)
         console.log(playerChoice, "my choice")
-        if (playerChoice === gameChoice) {
+        if (playerChoice.length == gameChoice.length) {
             checkArray(playerChoice, gameChoice)
             console.log('you did it')
             setTimeout(() => {
@@ -92,7 +92,7 @@ $(document).ready(function () {
         $(".blue").fadeIn()
         playerChoice.push(3)
         console.log(playerChoice, "my choice")
-        if (playerChoice === gameChoice) {
+        if (playerChoice.length == gameChoice.length) {
             checkArray(playerChoice, gameChoice)
             console.log('you did it')
             setTimeout(() => {
