@@ -2,7 +2,8 @@
 let playerChoice = []
 let gameChoice = []
 let num;
-let notRun
+// let notRun
+// let round
 // let gamePlay
 $(document).ready(function () {
     // document.querySelector(".red").toggle("scale");
@@ -41,7 +42,7 @@ $(document).ready(function () {
         $(".red").fadeIn()
         playerChoice.push(1)
         console.log(playerChoice, "my choice")
-        if (playerChoice.length == gameChoice.length) {
+        if (playerChoice.length === gameChoice.length) {
             checkArray(playerChoice, gameChoice)
             console.log('you did it')
             setTimeout(() => {
@@ -58,7 +59,7 @@ $(document).ready(function () {
         $(".yellow").fadeIn()
         playerChoice.push(2)
         console.log(playerChoice, "my choice")
-        if (playerChoice.length == gameChoice.length) {
+        if (playerChoice.length === gameChoice.length) {
             checkArray(playerChoice, gameChoice)
             console.log('you did it')
             setTimeout(() => {
@@ -75,7 +76,7 @@ $(document).ready(function () {
         $(".green").fadeIn()
         playerChoice.push(4)
         console.log(playerChoice, "my choice")
-        if (playerChoice.length == gameChoice.length) {
+        if (playerChoice.length === gameChoice.length) {
             checkArray(playerChoice, gameChoice)
             console.log('you did it')
             setTimeout(() => {
@@ -92,7 +93,7 @@ $(document).ready(function () {
         $(".blue").fadeIn()
         playerChoice.push(3)
         console.log(playerChoice, "my choice")
-        if (playerChoice.length == gameChoice.length) {
+        if (playerChoice.length === gameChoice.length) {
             checkArray(playerChoice, gameChoice)
             console.log('you did it')
             setTimeout(() => {
@@ -148,7 +149,7 @@ $(document).ready(function () {
                     $(".green").fadeIn()
                 }
 
-            },1000 * i) 
+            },500 * i) 
         // for( let i = 0 < gameChoice.length; i++) {
 
         // }
