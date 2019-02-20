@@ -3,6 +3,7 @@ let playerChoice = []
 let gameChoice = []
 let score = 0;
 let highscore = 0;
+let audio
 // let ScoreBoard = $('#score').text()
 
 $(document).ready(function () {
@@ -31,6 +32,7 @@ $(document).ready(function () {
             playerChoice = []
             setTimeout(() => {
                 randomColor()
+                
                 score ++
                 $('#score').text(`CURRENT SCORE = ${score}`)
                 if (score > highscore) {
