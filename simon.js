@@ -3,8 +3,11 @@ let playerChoice = []
 let gameChoice = []
 let score = 0;
 let highscore = 0;
-let audio
-// let ScoreBoard = $('#score').text()
+let audio = new Audio("Audio/bat.mp3")
+let audio2 = new Audio("Audio/gunup.mp3")
+let audio3 = new Audio("Audio/Track 25.mp3")
+let audio4 = new Audio("Audio/w_pkup.mp3")
+let ScoreBoard = $('#score').text()
 
 $(document).ready(function () {
 
@@ -24,6 +27,8 @@ $(document).ready(function () {
     }
     $('.red').on('click', function () {
         $(".red").fadeOut()
+        audio.play()
+        console.log('play sound')
         $(".red").fadeIn()
         playerChoice.push(1)
         console.log(playerChoice, "my choice")
@@ -32,7 +37,6 @@ $(document).ready(function () {
             playerChoice = []
             setTimeout(() => {
                 randomColor()
-                
                 score ++
                 $('#score').text(`CURRENT SCORE = ${score}`)
                 if (score > highscore) {
@@ -47,6 +51,7 @@ $(document).ready(function () {
     )
     $('.yellow').on('click', function () {
         $(".yellow").fadeOut()
+        audio2.play()
         $(".yellow").fadeIn()
         playerChoice.push(2)
         console.log(playerChoice, "my choice")
@@ -68,6 +73,7 @@ $(document).ready(function () {
     )
     $('.green').on('click', function () {
         $(".green").fadeOut()
+        audio3.play()
         $(".green").fadeIn()
         playerChoice.push(4)
         console.log(playerChoice, "my choice")
@@ -89,6 +95,7 @@ $(document).ready(function () {
     )
     $('.blue').on('click', function () {
         $(".blue").fadeOut()
+        audio4.play()
         $(".blue").fadeIn()
         playerChoice.push(3)
         console.log(playerChoice, "my choice")
