@@ -22,7 +22,6 @@ Languages: HTML, CSS, jQuery
 
 ## Future Developments/Improvements
 <ul>
-<li>Implement "categories" button where user can change categories/display new set of words</li>
 <li>Create a "rules" button which will display the rules of the game</li>
 <li>When the sequence runs you'll hear a sound as well</li>
 <li>Display animation for each incorrect guess, using sweet alert 2</li>
