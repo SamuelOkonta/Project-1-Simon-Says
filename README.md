@@ -4,7 +4,7 @@
 
 Simon game that displays 4 colored buttons (or clickable areas) that light up and play a sound. Have the computer play a random sequence, starting with a length of 1 and growing with each round. If the user can replay the sequence by clicking on the colored buttons in the correct order, then the computer goes to the next round and the sequence gets longer (same sequence but with one new randomly generated selection added to the end
 
-   #Trello Link to Trello https://trello.com/b/nSJ611qK/project-1-simon-says
+   #Trello Link to Trello [I'm an inline-style link]https://trello.com/b/nSJ611qK/project-1-simon-says
 
 #Wire-Frame:
 
