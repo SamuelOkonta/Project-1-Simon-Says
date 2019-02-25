@@ -1,7 +1,7 @@
-
+# Project-1--Simon Says
 
 <ul>
-<li>Project: https://dazzling-jepsen-3bd73c.netlify.com/</li>
+<li>Project: https://dreamy-poincare-c25896.netlify.com</li>
 <li>Trello Board: https://trello.com/b/nSJ611qK/project-1-simon-says</li>
 <li>GitHub: https://github.com/SamuelOkonta/Project-1-Simon-Says</li>
 </ul>
